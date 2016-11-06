@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "EID | Home";
+}
+
+<div ng-controller="HomeCtrl" ng-cloak>
+    <h1 class="BlogTitle">{{blog.title}}</h1>
+
+    <div ng-bind-html="blog.htmlBody"></div>
+
+    <dir-disqus disqus-shortname="EngineerInDev"
+                disqus-identifier="{{ identifier }}"
+                disqus-url="{{ url }}"
+                ready-to-bind="{{ contentLoaded }}">
+    </dir-disqus>
+</div>
+
